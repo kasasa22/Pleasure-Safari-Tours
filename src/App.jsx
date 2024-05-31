@@ -1,12 +1,19 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
-import Homecards from "./components/Homecards"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import AboutUs from "./components/AboutUs";
+import Services from "./components/Services.jsx";
+import Packages from "./components/Packages.jsx";
+
 const App = () => {
   return (
     <>
     <Navbar/>
     <Hero  />
-    <Homecards />
+    <AboutUs/>
+    <Services/>
+    <Packages/>
    
 
 
