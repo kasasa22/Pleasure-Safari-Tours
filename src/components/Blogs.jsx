@@ -1,6 +1,6 @@
 import React from 'react';
-import blogImg1 from '../assets/images/blog-1.jpg';
-import blogImg2 from '../assets/images/blog-2.jpg';
+import blogImg1 from '../assets/images/zoo.jpeg';
+import blogImg2 from '../assets/images/fun.jpeg';
 import blogImg3 from '../assets/images/blog-3.jpg';
 import '../style.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,10 +10,10 @@ const blogData = [
     {
         id: 1,
         image: blogImg1,
-        date: '28 Jan 2050',
+        date: '28 Jan 2020',
         likes: '1.7K',
         comments: '1K',
-        author: 'Royal Hamblin',
+        author: 'Derox_ug',
         title: 'Adventures Trip',
         description: 'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos'
     },
