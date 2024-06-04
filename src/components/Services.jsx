@@ -6,46 +6,46 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 const Services = () => {
   const servicesLeft = [
     {
-      title: 'WorldWide Tours',
-      description: 'Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.',
+      title: 'Air Reservation and Ticketing',
+      description: 'We take the hassle out of booking flights by offering reliable air reservation and ticketing services. Whether you\'re flying domestically or internationally, we\'ve got you covered.',
       icon: 'fa-globe',
     },
     {
-      title: 'Hotel Reservation',
-      description: 'Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.',
+      title: 'Tour Packages',
+      description: ' Discover the world with our meticulously crafted tour packages. From adventure tours to relaxing getaways, we cater to all types of travelers.',
       icon: 'fa-hotel',
     },
     {
-      title: 'Travel Guides',
-      description: 'Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.',
-      icon: 'fa-user',
+      title: 'Visa and Passport Processing',
+      description: 'Navigating the complexities of visa and passport applications can be daunting. Our expert team is here to ensure a smooth and efficient process.',
+      icon: 'fa-hotel',
     },
     {
-      title: 'Event Management',
-      description: 'Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.',
-      icon: 'fa-cog',
+      title: 'Hotel Reservations',
+      description:' Finding the perfect accommodation is crucial for a great trip. We offer hotel reservation services that match your preferences and budget.',
+      icon: 'fa-hotel',
     },
   ];
 
   const servicesRight = [
     {
-      title: 'WorldWide Tours',
-      description: 'Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.',
-      icon: 'fa-globe',
-    },
-    {
-      title: 'Hotel Reservation',
-      description: 'Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.',
+      title: 'Airport Transfers',
+      description: 'Start your journey stress-free with our reliable airport transfer services, ensuring you get to and from the airport comfortably and on time.',
       icon: 'fa-hotel',
     },
     {
-      title: 'Travel Guides',
-      description: 'Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.',
+      title: 'Educational Tours',
+      description: ' Enhance your learning experience with our educational tours, designed to provide enriching and informative travel experiences for students and educators alike.',
+      icon: 'fa-hotel',
+    },
+    {
+      title: 'Religious Tours',
+      description: ' Embark on a spiritual journey with our specially curated religious tours, tailored to help you explore and deepen your faith.',
       icon: 'fa-user',
     },
     {
-      title: 'Event Management',
-      description: 'Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.',
+      title: 'Cruise Bookings',
+      description: 'Set sail on an unforgettable adventure with our cruise booking services, offering a variety of destinations and cruise lines to choose from.',
       icon: 'fa-cog',
     },
   ];

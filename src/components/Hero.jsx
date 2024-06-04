@@ -3,8 +3,9 @@ import '../style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Make sure to import the Bootstrap JS
 import carousel from '../assets/images/carousel-2.jpg'; 
-import carousel1 from '../assets/images/carousel-1.jpg'; 
-import carousel3 from '../assets/images/carousel-3.jpg'; 
+import carousel1 from '../assets/images/ticket.jpg'; 
+import carousel3 from '../assets/images/water.jpg'; 
+import airticket from '../assets/images/tour.jpeg'; 
 
 const Hero = () => {
   return ( 
@@ -18,15 +19,14 @@ const Hero = () => {
           </ol>
           <div className="carousel-inner" role="listbox">
             <div className="carousel-item active">
-              <img src={carousel} className="img-fluid" alt="Image 1" />
+              <img src={airticket} className="img-fluid" alt="Image 1" />
               <div className="carousel-caption">
                 <div className="p-3" style={{ maxWidth: "900px" }}>
-                  <h4 className="text-white text-uppercase fw-bold mb-4" style={{ letterSpacing: "3px" }}>Explore The World</h4>
-                  <h1 className="display-2 text-capitalize text-white mb-4">Let's The World Together!</h1>
-                  <p className="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                  </p>
+                  <h4 className="text-white text-uppercase fw-bold mb-4" style={{ letterSpacing: "3px" }}>Navigate The World</h4>
+                  <h1 className="display-2 text-capitalize text-white mb-4">Let's Guide you around the world</h1>
+                  <p className="mb-5 fs-5">let's go to various areas of interest around the world and explore as we learn</p>
                   <div className="d-flex align-items-center justify-content-center">
-                    <a className="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                    <a className="btn-hover-bg bg-purple-500  rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
                   </div>
                 </div>
               </div>
@@ -36,11 +36,10 @@ const Hero = () => {
               <div className="carousel-caption">
                 <div className="p-3" style={{ maxWidth: "900px" }}>
                   <h4 className="text-white text-uppercase fw-bold mb-4" style={{ letterSpacing: "3px" }}>Explore The World</h4>
-                  <h1 className="display-2 text-capitalize text-white mb-4">Find Your Perfect Tour At Travel</h1>
-                  <p className="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                  </p>
+                  <h1 className="display-2 text-capitalize text-white mb-4">Quick and Faster ticket and visa Processing</h1>
+                  <p className="mb-5 fs-5">DISCOVER. EXPLORE. EMBRACE </p>
                   <div className="d-flex align-items-center justify-content-center">
-                    <a className="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                    <a className="btn-hover-bg bg-purple-500  rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
                   </div>
                 </div>
               </div>
@@ -49,23 +48,23 @@ const Hero = () => {
               <img src={carousel3} className="img-fluid" alt="Image 3" />
               <div className="carousel-caption">
                 <div className="p-3" style={{ maxWidth: "900px" }}>
-                  <h4 className="text-white text-uppercase fw-bold mb-4" style={{ letterSpacing: "3px" }}>Explore The World</h4>
-                  <h1 className="display-2 text-capitalize text-white mb-4">You Like To Go?</h1>
-                  <p className="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                  <h4 className="text-white text-uppercase fw-bold mb-4" style={{ letterSpacing: "3px" }}>Tour The World</h4>
+                  <h1 className="display-2 text-capitalize text-white mb-4">Have fun with us!</h1>
+                  <p className="mb-5 fs-5">enjoy various activities with us in different places around the world. 
                   </p>
                   <div className="d-flex align-items-center justify-content-center">
-                    <a className="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                    <a className="btn-hover-bg bg-purple-500 rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon btn bg-primary" aria-hidden="true"></span>
+            <span className="carousel-control-prev-icon bg-purple-500" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
           </button>
           <button className="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-            <span className="carousel-control-next-icon btn bg-primary" aria-hidden="true"></span>
+            <span className="carousel-control-next-icon btn bg-purple-500" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>
         </div>

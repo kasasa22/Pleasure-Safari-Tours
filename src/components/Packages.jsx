@@ -44,18 +44,7 @@ const packagesData = [
         rating: 5,
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat'
     },
-    {
-        id: 4,
-        image: packageImg1,
-        location: 'Thailand',
-        days: '3 days',
-        persons: '2 Person',
-        price: '$649.00',
-        title: 'Thailand Trip',
-        category: 'Hotel Deals',
-        rating: 5,
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat'
-    },
+   
 ];
 
 const Packages = () => {
