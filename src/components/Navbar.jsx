@@ -22,30 +22,30 @@ const Navbar= () => {
             <div className="md:ml-auto">
               <div className="flex space-x-2">
                 <a
-                  href="/index.html"
+                  href="/"
                   className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                   >Home</a
                 >
                 <a
-                  href="/jobs.html"
+                  href="/aboutUs"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                   >About</a
                 >
                 <a
-                  href="/add-job.html"
+                  href="/services"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                   >Services</a>
 
 <a
-                  href="/add-job.html"
+                  href="/packages"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                   >Packages</a>
                   <a
-                  href="/add-job.html"
+                  href="/Blogs"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                   >Blogs</a>
                   <a
-                  href="/add-job.html"
+                  href="/contact"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                   >Contact</a>
                 
