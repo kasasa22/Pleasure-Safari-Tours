@@ -4,7 +4,8 @@ import about from '../assets/img/about-2.png';
 import about1 from '../assets/img/about-3.jpg'; 
 
 import Header from '../components/Header';
-import CountriesWeOffer from '../components/CountriesWeOffer'; // import the new component
+import CountriesWeOffer from '../components/CountriesWeOffer'; 
+import MeetOurGuide from '../components/MeetOurGuide';
 
 const About = () => {
   return (
@@ -67,7 +68,9 @@ const About = () => {
           </div>
         </div>
       </div>
-      <CountriesWeOffer /> {/* include the new component */}
+      <CountriesWeOffer /> 
+      <MeetOurGuide />
+
     </>
   );
 }

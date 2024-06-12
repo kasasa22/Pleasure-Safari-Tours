@@ -95,9 +95,13 @@
 /*** Section Title Start ***/
 .section-title {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     text-transform: uppercase;
     color: var(--bs-primary);
+}
+padd{
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .section-title::before {

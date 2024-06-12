@@ -10,16 +10,14 @@ import italy from '../assets/img/italy.jpg'; // replace with the correct path
 
 const CountriesWeOffer = () => {
   return (
-    <div className="container-fluid country overflow-hidden py-5">
-      <div className="container py-5">
+    <div className="container-fluid country overflow-hidden padd">
+      <div className="container padd">
         <div className="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style={{ marginBottom: '70px' }}>
           <div className="sub-style">
-            <h5 className="sub-title text-primary px-3">Services WE OFFER</h5>
+            <h5 className="sub-title text-purple  px-3">Services WE OFFER</h5>
           </div>
-          <h1 className="display-5 mb-4">Immigration & visa services following Countries</h1>
-          <p className="mb-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!
-          </p>
+          <h1 className="display-5 text-purple mb-4">Explore various  Countries Around the world</h1>
+          
         </div>
         <div className="row g-4 text-center">
           <div className="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.1s">
