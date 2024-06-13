@@ -7,7 +7,7 @@ import Services from './pages/Services.jsx';
 import Packages from './pages/Packages.jsx';
 import Blogs from './pages/Blogs.jsx';
 import Home from './pages/Home.jsx';
-import Contact from './pages/Contact.jsx';
+import Contact from './pages/ContactPage.jsx';
 import MainLayout from './layouts/MainLayout.jsx';
 
 const routes = createRoutesFromElements(
