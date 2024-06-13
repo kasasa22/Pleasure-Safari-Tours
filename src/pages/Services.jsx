@@ -1,6 +1,6 @@
 // src/components/Services.js
 import React from 'react';
-import '../style.css'; 
+import '../style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -12,7 +12,7 @@ import serviceImg5 from '../assets/img/service-5.jpeg';
 import serviceImg6 from '../assets/img/service-6.jpeg';
 import serviceImg7 from '../assets/img/service-7.jpeg';
 import serviceImg8 from '../assets/img/service-8.jpeg';
-
+import serviceImg9 from '../assets/img/service-9.jpeg';
 import Header from '../components/Header';
 
 const ServiceCard = ({ delay, image, title, description }) => (
@@ -20,7 +20,7 @@ const ServiceCard = ({ delay, image, title, description }) => (
     <div className="service-item">
       <div className="service-inner">
         <div className="service-img">
-          <img src={image} className="img-fluid w-100 rounded" alt="Image" />
+          <img src={image} className="img-fluid fixed-size rounded" alt="Image" />
         </div>
         <div className="service-title">
           <div className="service-title-name">
@@ -33,7 +33,7 @@ const ServiceCard = ({ delay, image, title, description }) => (
             <a href="#"><h4 className="text-white mb-4 py-3">{title}</h4></a>
             <div className="px-4">
               <p className="mb-4">{description}</p>
-              <a className="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
+              <a className="btn  border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
             </div>
           </div>
         </div>
@@ -51,10 +51,10 @@ const Services = () => {
       description: 'We provide seamless air reservations and ticketing services to ensure a hassle-free journey. From selecting the best flights to booking your tickets, we manage everything for you.',
     },
     {
-      delay: 0.3,
-      image: serviceImg2,
-      title: 'Tour Packages',
-      description: 'Explore the world with our curated tour packages. Whether you seek adventure, relaxation, or cultural immersion, we have the perfect package tailored to your preferences.',
+      delay: 0.5,
+      image: serviceImg8,
+      title: 'Excursion & Local Sightseeing',
+      description: 'Discover the local culture and attractions with our excursion and sightseeing tours. We provide guided tours to the most popular and hidden gems of your destination.',
     },
     {
       delay: 0.5,
@@ -86,20 +86,21 @@ const Services = () => {
       title: 'Cruise Bookings',
       description: 'Sail the seas with our cruise booking services. Choose from a variety of luxurious cruises that offer breathtaking views, entertainment, and relaxation on the open waters.',
     },
+  
+    
     {
-      delay: 0.5,
-      image: serviceImg8,
-      title: 'Excursion & Local Sightseeing',
-      description: 'Discover the local culture and attractions with our excursion and sightseeing tours. We provide guided tours to the most popular and hidden gems of your destination.',
+      delay: 0.3,
+      image: serviceImg2,
+      title: 'Tour Packages',
+      description: 'Explore the world with our curated tour packages. Whether you seek adventure, relaxation, or cultural immersion, we have the perfect package tailored to your preferences.',
     },
     {
       delay: 0.5,
-      image: serviceImg3,
+      image: serviceImg9,
       title: 'Business Tours',
       description: 'Optimize your business travel with our comprehensive business tour services. We handle all the logistics, ensuring your focus remains on your professional engagements.',
     },
   ];
-  
 
   return (
     <div>
@@ -107,11 +108,11 @@ const Services = () => {
       <div className="container-fluid service overflow-hidden py-5">
         <div className="container py-5">
           <div className="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div className="sub-style">
-              <h5 className="sub-title text-primary px-3">Visa Categories</h5>
-            </div>
-            <h1 className="display-5 mb-4">Enabling Your Immigration Successfully</h1>
-            <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
+            {/* <div className="sub-style">
+              <h5 className="sub-title text-primary px-3">Our Services</h5>
+            </div> */}
+            <h1 className="display-5 mb-4">Discover. <span className="text-purple">Explore.</span> Embrace.</h1>
+            <p className="mb-0 text-purple">Discover seamless travel planning with our comprehensive services. From flights and hotels to visas and local tours, we handle every detail to ensure a stress-free journey tailored to you.</p>
           </div>
           <div className="row g-4">
             {services.map((service, index) => (

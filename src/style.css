@@ -103,6 +103,12 @@ padd{
     padding-top: 50px;
     padding-bottom: 20px;
 }
+.img-fluid.fixed-size {
+    width: 100%; /* Make the image take up the full width of its container */
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
+  
 
 .section-title::before {
     content: "";
