@@ -3,6 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../styles.css'; 
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -11,7 +12,7 @@ const Header = () => {
         <h3 className="text-purple-800 display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Services</h3>
         <ol className="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
           <li className="breadcrumb-item">
-            <a href="index.html" className="text-warning">Home</a>
+            <NavLink href="/" className="text-warning">Home</NavLink>
           </li>
           <li className="breadcrumb-item">
             <a href="#" className="text-warning">Pages</a>

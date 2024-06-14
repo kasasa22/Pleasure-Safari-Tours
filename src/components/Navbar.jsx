@@ -1,4 +1,5 @@
 import logo from '../assets/images/logo.png'; 
+import { NavLink,Link } from 'react-router-dom';
 const Navbar= () => {
   return (
     <div>
@@ -21,33 +22,43 @@ const Navbar= () => {
             </a>
             <div className="md:ml-auto">
               <div className="flex space-x-2">
-                <a
-                  href="/"
-                  className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                  >Home</a
-                >
-                <a
-                  href="/aboutUs"
-                  className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                  >About</a
-                >
-                <a
-                  href="/services"
-                  className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                  >Services</a>
+                <NavLink
+                  to="/"
+                  className={
+                    ({isActive})=>isActive ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2':'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+                  }
+                  >Home</NavLink>
+                <NavLink                  to="/aboutUs"
+                  className={
+                    ({isActive})=>isActive ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2':'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+                  }
+                  >About</NavLink>
+                
+                <NavLink
+                  to="/services"
+                  className={
+                    ({isActive})=>isActive ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2':'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+                  }
+                  >Services</NavLink>
 
-<a
-                  href="/packages"
-                  className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                  >Packages</a>
-                  <a
-                  href="/Blogs"
-                  className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                  >Blogs</a>
-                  <a
-                  href="/contact"
-                  className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                  >Contact</a>
+                 <NavLink              
+                  to="/packages"
+                  className={
+                    ({isActive})=>isActive ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2':'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+                  }
+                  >Packages</NavLink>
+                  <NavLink
+                  to="/Blogs"
+                  className={
+                    ({isActive})=>isActive ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2':'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+                  }
+                  >Blogs</NavLink>
+                  <NavLink
+                  to="/contact"
+                  className={
+                    ({isActive})=>isActive ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2':'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+                  }
+                  >Contact</NavLink>
                 
               </div>
             </div>

@@ -30,7 +30,7 @@ const ContactPage = () => {
               <h5 className="sub-title text-purple pe-3">Let’s Connect</h5>
             </div>
             <h1 className="display-5 mb-4">Send Your Message</h1>
-            <p className="mb-3">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a className="text-purple fw-bold" href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+           
             <ContactForm />
           </div>
         </div>

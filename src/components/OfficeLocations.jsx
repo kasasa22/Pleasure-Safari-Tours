@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
+import img1 from '../assets/img/office-3.jpg';
+import img2 from '../assets/img/office-4.jpg';
 
 const offices = [
   {
@@ -7,14 +8,14 @@ const offices = [
     phone: '01234.567.890',
     email: 'travisa@example.com',
     address: '123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.',
-    image: 'img/office-3.jpg' // Replace with actual image path
+    image: img1,
   },
   {
     country: 'India',
     phone: '+123.45.67890',
     email: 'travisa@example.com',
     address: '123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.',
-    image: 'img/office-4.jpg' // Replace with actual image path
+    image: img2
   }
 ];
 

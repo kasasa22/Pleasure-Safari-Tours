@@ -5,6 +5,7 @@ import blogImg3 from '../assets/images/blog-3.jpg';
 import '../style.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Link } from 'react-router-dom';
 
 const blogData = [
     {
@@ -69,7 +70,7 @@ const Blogs = () => {
                                     <p className="mb-3">Posted By: {blog.author} </p>
                                     <a href="#" className="h4">{blog.title}</a>
                                     <p className="my-3">{blog.description}</p>
-                                    <a href="#" className="btn btn-primary rounded-pill py-2 px-4">Read More</a>
+                                    <Link to="/about" className="btn btn-primary rounded-pill py-2 px-4">Read More</Link>
                                 </div>
                             </div>
                         </div>

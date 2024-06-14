@@ -7,7 +7,7 @@ const ContactInfo = () => {
         <i className="fas fa-map-marked-alt fa-4x text-primary bg-light p-3 rounded"></i>
         <div className="ps-3">
           <h5>Location</h5>
-          <p>123, First Floor, 123 St Roots Terrace, Los Angeles 90010 Unitd States of America.</p>
+          <p>Kamu Kamu Building, Second Floor, Entebbe Road, suite F2</p>
         </div>
       </div>
       <div className="row g-3">
@@ -18,11 +18,11 @@ const ContactInfo = () => {
               <h5 className="mb-3">Quick Contact</h5>
               <div className="mb-3">
                 <h6 className="mb-0">Phone:</h6>
-                <a href="#" className="fs-5 text-primary">+012 3456 7890</a>
+                <a href="#" className="fs-5 text-primary">+256 704 368446</a>
               </div>
               <div className="mb-3">
                 <h6 className="mb-0">Email:</h6>
-                <a href="#" className="fs-5 text-primary">travisa@example.com</a>
+                <a href="#" className="fs-5 text-primary">pleasursafaritours@gmail.com</a>
               </div>
             </div>
           </div>
