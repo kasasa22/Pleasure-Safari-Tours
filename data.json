@@ -1,0 +1,129 @@
+{
+    "packages": [
+      {
+        "id": 1,
+        "image": "packageImg4",
+        "location": "Venice - Italy",
+        "days": "3 days",
+        "persons": "2 Person",
+        "price": "$349.00",
+        "title": "Venice - Italy",
+        "category": "Hotel Deals",
+        "rating": 5,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat"
+      },
+      {
+        "id": 2,
+        "image": "packageImg2",
+        "location": "California - USA",
+        "days": "3 days",
+        "persons": "2 Person",
+        "price": "$449.00",
+        "title": "The New California",
+        "category": "Hotel Deals",
+        "rating": 5,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat"
+      },
+      {
+        "id": 3,
+        "image": "packageImg3",
+        "location": "Japan",
+        "days": "3 days",
+        "persons": "2 Person",
+        "price": "$549.00",
+        "title": "Discover Japan",
+        "category": "Hotel Deals",
+        "rating": 5,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia quae illum aperiam fugiat voluptatem repellat"
+      }
+    ],
+    "blogs": [
+      {
+        "id": 1,
+        "image": "blogImg1",
+        "date": "28 Jan 2020",
+        "likes": "1.7K",
+        "comments": "1K",
+        "author": "Derox_ug",
+        "title": "Adventures Trip",
+        "description": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos"
+      },
+      {
+        "id": 2,
+        "image": "blogImg2",
+        "date": "28 Jan 2050",
+        "likes": "1.7K",
+        "comments": "1K",
+        "author": "Royal Hamblin",
+        "title": "Adventures Trip",
+        "description": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos"
+      },
+      {
+        "id": 3,
+        "image": "blogImg3",
+        "date": "28 Jan 2050",
+        "likes": "1.7K",
+        "comments": "1K",
+        "author": "Royal Hamblin",
+        "title": "Adventures Trip",
+        "description": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos"
+      }
+    ],
+    "services": [
+      {
+        "delay": 0.1,
+        "image": "serviceImg1",
+        "title": "Air Reservations and Ticketing",
+        "description": "We provide seamless air reservations and ticketing services to ensure a hassle-free journey. From selecting the best flights to booking your tickets, we manage everything for you."
+      },
+      {
+        "delay": 0.5,
+        "image": "serviceImg8",
+        "title": "Excursion & Local Sightseeing",
+        "description": "Discover the local culture and attractions with our excursion and sightseeing tours. We provide guided tours to the most popular and hidden gems of your destination."
+      },
+      {
+        "delay": 0.5,
+        "image": "serviceImg3",
+        "title": "Visa and Passport Processing",
+        "description": "Our experts handle all your visa and passport needs, ensuring a smooth and efficient process. Get your travel documents in order with our reliable services."
+      },
+      {
+        "delay": 0.1,
+        "image": "serviceImg4",
+        "title": "Hotel Reservations",
+        "description": "Book the best accommodations with our hotel reservation services. We ensure you stay in comfortable and convenient locations, tailored to your budget and preferences."
+      },
+      {
+        "delay": 0.3,
+        "image": "serviceImg5",
+        "title": "Airport Transfers",
+        "description": "Experience stress-free airport transfers with our reliable service. We provide comfortable and timely transportation to and from the airport, ensuring a smooth start and end to your trip."
+      },
+      {
+        "delay": 0.5,
+        "image": "serviceImg6",
+        "title": "Education Tours",
+        "description": "Enhance learning with our specialized education tours. We organize trips that combine education and exploration, offering enriching experiences for students and educators alike."
+      },
+      {
+        "delay": 0.5,
+        "image": "serviceImg7",
+        "title": "Cruise Bookings",
+        "description": "Sail the seas with our cruise booking services. Choose from a variety of luxurious cruises that offer breathtaking views, entertainment, and relaxation on the open waters."
+      },
+      {
+        "delay": 0.3,
+        "image": "serviceImg2",
+        "title": "Tour Packages",
+        "description": "Explore the world with our curated tour packages. Whether you seek adventure, relaxation, or cultural immersion, we have the perfect package tailored to your preferences."
+      },
+      {
+        "delay": 0.5,
+        "image": "serviceImg9",
+        "title": "Business Tours",
+        "description": "Optimize your business travel with our comprehensive business tour services. We handle all the logistics, ensuring your focus remains on your professional engagements."
+      }
+    ]
+  }
+  

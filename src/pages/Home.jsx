@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <Hero />
       <AboutUs />
-      <Services />
+      <Services isHome={true} />
       <Blogs />
     </div>
   );

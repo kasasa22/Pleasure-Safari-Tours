@@ -5,7 +5,7 @@ import aboutImg1 from '../assets/images/about-img-1.png';
 
 const AboutUs = () => {
   return (
-    <div className="container-fluid about py-5">
+    <div className="container-fluid about py-5" style={{ backgroundImage:aboutImg1 }}>
       <div className="container py-5">
         <div className="row g-5 align-items-center">
           <div className="col-lg-5">

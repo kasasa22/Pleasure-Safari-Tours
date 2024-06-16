@@ -1,0 +1,17 @@
+import React from 'react'
+import {Helmet} from 'react-helmet';
+
+const HelmetTitle = ({title}) => {
+  return (
+    <div>
+        <Helmet>
+            <title>
+                {title}
+            </title>
+        </Helmet>
+      
+    </div>
+  )
+}
+
+export default HelmetTitle

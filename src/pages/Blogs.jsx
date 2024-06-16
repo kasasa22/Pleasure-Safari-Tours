@@ -1,47 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import blogImg1 from '../assets/images/zoo.jpeg';
 import blogImg2 from '../assets/images/fun.jpeg';
 import blogImg3 from '../assets/images/blog-3.jpg';
 import '../style.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
-const blogData = [
-    {
-        id: 1,
-        image: blogImg1,
-        date: '28 Jan 2020',
-        likes: '1.7K',
-        comments: '1K',
-        author: 'Derox_ug',
-        title: 'Adventures Trip',
-        description: 'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos'
-    },
-    {
-        id: 2,
-        image: blogImg2,
-        date: '28 Jan 2050',
-        likes: '1.7K',
-        comments: '1K',
-        author: 'Royal Hamblin',
-        title: 'Adventures Trip',
-        description: 'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos'
-    },
-    {
-        id: 3,
-        image: blogImg3,
-        date: '28 Jan 2050',
-        likes: '1.7K',
-        comments: '1K',
-        author: 'Royal Hamblin',
-        title: 'Adventures Trip',
-        description: 'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos'
-    },
-];
+const images = {
+    "blogImg1": blogImg1,
+    "blogImg2": blogImg2,
+    "blogImg3": blogImg3
+};
 
 const Blogs = () => {
+    const [blogData, setBlogData] = useState([]);
+
+    useEffect(() => {
+        fetch('/data.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.blogs);  // Add this line to debug
+                setBlogData(data.blogs);
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
+
     return (
+        <>
+        <Header/>    
         <div className="container-fluid blog py-5">
             <div className="container py-5">
                 <div className="mx-auto text-center mb-5" style={{ maxWidth: '900px' }}>
@@ -55,7 +43,7 @@ const Blogs = () => {
                             <div className="blog-item">
                                 <div className="blog-img">
                                     <div className="blog-img-inner">
-                                        <img className="img-fluid w-100 rounded-top" src={blog.image} alt="Image" />
+                                        <img className="img-fluid w-100 rounded-top" src={images[blog.image]} alt="Image" />
                                         <div className="blog-icon">
                                             <a href="#" className="my-auto"><i className="fas fa-link fa-2x text-white"></i></a>
                                         </div>
@@ -78,6 +66,7 @@ const Blogs = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
