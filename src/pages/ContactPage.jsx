@@ -20,7 +20,8 @@ const ContactPage = () => {
               <h5 className="sub-title text-purple pe-3">Quick Contact</h5>
             </div>
             <h1 className="display-5 mb-4">Have Questions? Don't Hesitate to Contact Us</h1>
-            <p className="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat totam deserunt tempora. Tempore neque necessitatibus corporis error earum sint quae?</p>
+            <p className="mb-5">Experience the best travel services tailored to your needs. Our team is dedicated to providing you with seamless and enjoyable journeys, ensuring every detail is taken care of.</p>
+
             <ContactInfo />
           </div>
 

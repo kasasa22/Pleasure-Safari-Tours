@@ -71,10 +71,7 @@ const Services = ({ isHome = false }) => {
       <Header />
       <div className="container-fluid service overflow-hidden py-5">
         <div className="container py-5">
-          <div className="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <h1 className="display-5 mb-4">Discover. <span className="text-purple">Explore.</span> Embrace.</h1>
-            <p className="mb-0 text-purple">Discover seamless travel planning with our comprehensive services. From flights and hotels to visas and local tours, we handle every detail to ensure a stress-free journey tailored to you.</p>
-          </div>
+         
           <div className="row g-4">
             {serviceList.map((service, index) => (
               <ServiceCard 

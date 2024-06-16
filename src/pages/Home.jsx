@@ -5,14 +5,18 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import AboutUs from '../components/AboutUs';
 import Services from '../components/Services';
 import Blogs from '../components/Blogs';
+import '../style.css';
+import bgImage from '../assets/images/destination-5.jpg';
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      <AboutUs />
-      <Services isHome={true} />
-      <Blogs />
+      <div className='bg-image' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <AboutUs />
+        <Services isHome={true} />
+        <Blogs />
+      </div>
     </div>
   );
 };

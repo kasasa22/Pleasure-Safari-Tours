@@ -32,11 +32,7 @@ const Blogs = () => {
         <Header/>    
         <div className="container-fluid blog py-5">
             <div className="container py-5">
-                <div className="mx-auto text-center mb-5" style={{ maxWidth: '900px' }}>
-                    <h5 className="section-title px-3">Our Blog</h5>
-                    <h1 className="mb-4">Popular Travel Blogs</h1>
-                    <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt tenetur sapiente atque. Magni non explicabo beatae sit, vel reiciendis consectetur numquam id similique sunt error obcaecati ducimus officia maiores.</p>
-                </div>
+            
                 <div className="row g-4 justify-content-center">
                     {blogData.map((blog) => (
                         <div className="col-lg-4 col-md-6" key={blog.id}>

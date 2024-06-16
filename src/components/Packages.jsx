@@ -3,7 +3,7 @@ import packageImg1 from '../assets/images/packages-1.jpg';
 import packageImg2 from '../assets/images/packages-2.jpg';
 import packageImg3 from '../assets/images/packages-3.jpg';
 import packageImg4 from '../assets/images/packages-4.jpg';
-import '../style.css'; 
+import '../styles.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
