@@ -9,6 +9,7 @@ import Blogs from './pages/Blogs.jsx';
 import Home from './pages/Home.jsx';
 import Contact from './pages/ContactPage.jsx';
 import MainLayout from './layouts/MainLayout.jsx';
+import ServicePage from './pages/ServicePage.jsx';
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<MainLayout />} >
@@ -18,6 +19,7 @@ const routes = createRoutesFromElements(
   <Route path="/packages" element={<Packages />} /> 
   <Route path="/Blogs" element={<Blogs />} /> 
   <Route path="/Contact" element={<Contact/>} /> 
+  <Route path="/Services/:id" element={<ServicePage/>} /> 
   </Route>
 );
 

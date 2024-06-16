@@ -13,6 +13,7 @@ import serviceImg7 from '../assets/img/service-7.jpeg';
 import serviceImg8 from '../assets/img/service-8.jpeg';
 import serviceImg9 from '../assets/img/service-9.jpeg';
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 
 const images = {
   "serviceImg1": serviceImg1,
@@ -44,7 +45,7 @@ const ServiceCard = ({ delay, image, title, description }) => (
             <a href="#"><h4 className="text-white mb-4 py-3">{title}</h4></a>
             <div className="px-4">
               <p className="mb-4">{description}</p>
-              <a className="btn  border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
+              <Link className="btn  border-secondary rounded-pill text-white py-3 px-5" to="{'/services/${services.id'}">Explore More</Link>
             </div>
           </div>
         </div>

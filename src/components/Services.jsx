@@ -15,6 +15,7 @@ import serviceImg8 from '../assets/img/service-8.jpeg';
 import serviceImg9 from '../assets/img/service-9.jpeg';
 import Header from '../components/Header';
 
+
 const ServiceCard = ({ delay, image, title, description }) => (
   <div className={`col-lg-6 col-xl-4 wow fadeInUp`} data-wow-delay={`${delay}s`}>
     <div className="service-item">
