@@ -107,8 +107,13 @@ const Services = ({isHome =false}) => {
   return (
     <div>
     
-      <div className="container-fluid service overflow-hidden py-5 bg-purple-100">
+      <div className="container-fluid service overflow-hidden py-5">
         <div className="container py-5">
+        <div className="mx-auto text-center " style={{ maxWidth: '900px' }}>
+                    <h5 className="section-title px-3">OUR SERVICES</h5>
+                    <h1 className="mb-4 ">Explore Our Services</h1>
+                    
+                </div>
          
           <div className="row g-4">
             {serviceList.map((service, index) => (
