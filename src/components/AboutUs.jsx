@@ -11,8 +11,8 @@ const AboutUs = () => {
         <div className="container py-5">
           <div className="row g-5 align-items-center">
           <div className="mx-auto text-center " style={{ maxWidth: '900px' }}>
-                    <h5 className="section-title px-3">ABOUT_US</h5>
-                    <h1 className="mb-4 ">DISCOVER. EXPLORE. EMBRANCE</h1>
+                    <h5 className="section-title h1 px-3 " style={{ color: 'purple' }}>ABOUT_US</h5>
+                    <h1 className="mb-4 h4">DISCOVER. <span className='bg-purple'> EXPLORE.</span> EMBRANCE</h1>
                     
                 </div>
             <div className="col-lg-5">
