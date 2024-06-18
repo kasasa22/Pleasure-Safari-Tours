@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <div className='bg-image' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className='bg-image' style={{ backgroundColor: '#fdf4ff' }}>
         <AboutUs />
         <Services isHome={true} />
         <Blogs />
