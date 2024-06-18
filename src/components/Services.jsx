@@ -26,15 +26,15 @@ const ServiceCard = ({ delay, image, title, description }) => (
         <div className="service-title">
           <div className="service-title-name">
             <div className="bg-primary text-center rounded p-3 mx-5 mb-4">
-              <a href="#" className="h4 text-white mb-0">{title}</a>
+              <a href="#" className="h4  mb-0">{title}</a>
             </div>
             <a className="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
           </div>
           <div className="service-content pb-4">
-            <a href="#"><h4 className="text-white mb-4 py-3">{title}</h4></a>
-            <div className="px-4">
-              <p className="mb-4">{description}</p>
-              <a className="btn  border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
+            <a href="#"><h4 className=" mb-4 py-3" >{title}</h4></a>
+            <div className="px-4 bg-purple">
+              <p className="mb-4 bg-purple">{description}</p>
+              <a className="btn  border-secondary rounded-pill py-3 px-5" href="#">Explore More</a>
             </div>
           </div>
         </div>
@@ -105,13 +105,13 @@ const Services = ({isHome =false}) => {
   const serviceList = isHome ? services.slice(0,3):services;
 
   return (
-    <div>
     
-      <div className="container-fluid service overflow-hidden py-5">
-        <div className="container py-5">
+    
+      <div className="container-fluid service overflow-hidden ">
+        <div className="container ">
         <div className="mx-auto text-center " style={{ maxWidth: '900px' }}>
-                    <h5 className="section-title px-3">OUR SERVICES</h5>
-                    <h1 className="mb-4 ">Explore Our Services</h1>
+                    <h5 className="section-title px-3 h1 " style={{ color: 'purple' }}>OUR SERVICES</h5>
+                    <h1 className="mb-4 h3">Explore Our Services</h1>
                     
                 </div>
          
@@ -128,7 +128,7 @@ const Services = ({isHome =false}) => {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 
