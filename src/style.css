@@ -14,7 +14,12 @@
     opacity: 1;
 }
 /*** Spinner End ***/
-
+.bg-orange{
+    background-color: var(--bs-orange) !important;
+}
+.bg-purple{
+    background-color: rgb(118, 58, 163);
+}
 
 
 .back-to-top {
