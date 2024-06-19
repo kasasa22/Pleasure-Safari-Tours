@@ -44,8 +44,8 @@ const Blogs = () => {
         <div className="container-fluid blog py-5">
             <div className="container py-5">
                 <div className="mx-auto text-center" style={{ maxWidth: '900px' }}>
-                    <h5 className="section-title px-3">Our Blog</h5>
-                    <h1 className="mb-4">Popular Travel Blogs</h1>
+                    <h5 className="section-title h1  px-3" style={{ color: 'purple' }}>Our Blogs</h5>
+                    <h1 className="mb-4 h3" style={{ color:'orange' }}>Popular <span className="text-purple">Travel</span> Blogs</h1>
                    
                 </div>
                 <div className="row g-4 justify-content-center">
@@ -60,16 +60,16 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                     <div className="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                        <small className="flex-fill text-center border-end py-2"><i className="fa fa-calendar-alt text-primary me-2"></i>{blog.date}</small>
-                                        <a href="#" className="btn-hover flex-fill text-center text-white border-end py-2"><i className="fa fa-thumbs-up text-primary me-2"></i>{blog.likes}</a>
-                                        <a href="#" className="btn-hover flex-fill text-center text-white py-2"><i className="fa fa-comments text-primary me-2"></i>{blog.comments}</a>
+                                        <small className="flex-fill text-center border-end py-2"><i className="fa fa-calendar-alt text-purple me-2"></i>{blog.date}</small>
+                                        <a href="#" className="btn-hover flex-fill text-center text-white border-end py-2"><i className="fa fa-thumbs-up text-purple me-2"></i>{blog.likes}</a>
+                                        <a href="#" className="btn-hover flex-fill text-center text-white py-2"><i className="fa fa-comments text-purple me-2"></i>{blog.comments}</a>
                                     </div>
                                 </div>
                                 <div className="blog-content border border-top-0 rounded-bottom p-4">
                                     <p className="mb-3">Posted By: {blog.author} </p>
-                                    <a href="#" className="h4">{blog.title}</a>
+                                    <a href="#" className="h4 text-purple">{blog.title}</a>
                                     <p className="my-3">{blog.description}</p>
-                                    <a href="#" className="btn btn-primary rounded-pill py-2 px-4">Read More</a>
+                                    <a href="#" className="btn bg-orange text-white  border-secondary rounded-pill py-3 px-5" >Read More</a>
                                 </div>
                             </div>
                         </div>
