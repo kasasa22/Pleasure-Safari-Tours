@@ -9,10 +9,10 @@ import guide3 from '../assets/images/guide-3.jpg';
 import guide4 from '../assets/images/guide-4.jpg';
 
 const guides = [
-  { img: guide1, name: 'Yvonne', designation: 'Senior Guide' },
-  { img: guide2, name: 'Jane Smith', designation: 'Adventure Guide' },
-  { img: guide3, name: 'Bob Johnson', designation: 'Cultural Guide' },
-  { img: guide4, name: 'Alice Brown', designation: 'Nature Guide' },
+  { img: guide1, name: 'Yvonne', designation: 'CEO' },
+  { img: guide2, name: 'Chloe', designation: 'Senior Guide' },
+  { img: guide3, name: 'Derrick', designation: 'Administrator' },
+  { img: guide4, name: 'Trevor', designation: 'support' },
 ];
 
 const MeetOurGuide = () => {
@@ -20,8 +20,8 @@ const MeetOurGuide = () => {
     <div className="container-fluid guide py-5">
       <div className="container py-5">
         <div className="mx-auto text-center mb-5" style={{ maxWidth: '900px' }}>
-          <h5 className="section-title px-3">Travel Guide</h5>
-          <h1 className="mb-0">Meet Our Guide</h1>
+          <h5 className="section-title px-3 h1 text-purple">Travel Guide</h5>
+          <h1 className="mb-0 h3 text-orange">Meet Our Guide</h1>
         </div>
         <div className="row g-4">
           {guides.map((guide, index) => (

@@ -21,7 +21,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-              <h5 className="sub-title pe-3 text-purple">About the company</h5>
+              <h5 className="sub-title pe-3 text-purple h2">About the company</h5>
               <h1 className="display-5 mb-4">We’re Trusted Tours and Travel Agency.</h1>
               <p className="mb-4">At <span className='text-purple'>Preasure and Safari </span>Tours, we specialize in crafting unforgettable travel experiences. From breathtaking adventures to relaxing getaways, our expertly curated tours cater to all types of travelers. Discover hidden gems, immerse yourself in diverse cultures, and create lasting memories with our personalized travel packages. Whether you’re seeking the thrill of exploration or the comfort of guided tours, we’re here to make your dream vacation a reality. Join us and embark on a journey of a lifetime!</p>
               <div className="row gy-4 align-items-center">

@@ -14,9 +14,9 @@ const CountriesWeOffer = () => {
       <div className="container padd">
         <div className="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style={{ marginBottom: '70px' }}>
           <div className="sub-style">
-            <h5 className="sub-title text-purple  px-3">Services WE OFFER</h5>
+            <h5 className="sub-title text-purple  px-3 h2">Most Visted Countries</h5>
           </div>
-          <h1 className="display-5 text-purple mb-4">Explore various  Countries Around the world</h1>
+          <h1 className=" text-orange mb-4 h4">Explore various  Countries Around the world</h1>
           
         </div>
         <div className="row g-4 text-center">
@@ -73,7 +73,7 @@ const CountriesWeOffer = () => {
             </div>
           </div>
           <div className="col-12">
-            <a className="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">More Countries</a>
+            <a className="btn bg-orange text-white  border-secondary rounded-pill py-3 px-5" href="#">Explore Countries</a>
           </div>
         </div>
       </div>
