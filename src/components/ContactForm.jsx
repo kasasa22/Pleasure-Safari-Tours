@@ -41,7 +41,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="col-12">
-          <button className="btn btn-primary w-100 py-3">Send Message</button>
+          <button className="btn btn-primary bg-orange w-100 py-3" style={{ backgroundColor:'orange' }}>Send Message</button>
         </div>
       </div>
     </form>

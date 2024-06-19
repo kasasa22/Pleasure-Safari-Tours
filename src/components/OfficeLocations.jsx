@@ -25,10 +25,10 @@ const OfficeLocations = () => {
     <div className="office pt-5">
       <div className="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
         <div className="sub-style">
-          <h5 className="sub-title text-primary px-3">Worldwide Offices</h5>
+          <h5 className="sub-title text-orange h3 px-3">Worldwide Offices</h5>
         </div>
-        <h1 className="display-5 mb-4">Explore Our Offices Worldwide</h1>
-        <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
+        <h1 className="h1 text-purple mb-4">Explore Our Offices Worldwide</h1>
+        
       </div>
 
       <div className="row g-4 justify-content-center">

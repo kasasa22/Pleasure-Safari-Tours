@@ -17,9 +17,9 @@ const ContactPage = () => {
           {/* Left Column */}
           <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
             <div className="sub-style">
-              <h5 className="sub-title text-purple pe-3">Quick Contact</h5>
+              <h5 className="sub-title text-purple pe-3 h3">Quick Contact</h5>
             </div>
-            <h1 className="display-5 mb-4">Have Questions? Don't Hesitate to Contact Us</h1>
+            <h1 className="h1 mb-4">Have Questions? Don't Hesitate to Contact Us</h1>
             <p className="mb-5">Experience the best travel services tailored to your needs. Our team is dedicated to providing you with seamless and enjoyable journeys, ensuring every detail is taken care of.</p>
 
             <ContactInfo />
@@ -28,16 +28,16 @@ const ContactPage = () => {
           {/* Right Column */}
           <div className="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
             <div className="sub-style">
-              <h5 className="sub-title text-purple pe-3">Let’s Connect</h5>
+              <h5 className="sub-title text-purple pe-3 h3">Let’s Connect</h5>
             </div>
-            <h1 className="display-5 mb-4">Send Your Message</h1>
+            <h1 className="h1 mb-4">Send Your Message</h1>
            
             <ContactForm />
           </div>
         </div>
 
         {/* Office Locations Section */}
-        <OfficeLocations />
+        {/* <OfficeLocations /> */}
         
       </div>
     </div>
