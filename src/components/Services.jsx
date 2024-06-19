@@ -25,16 +25,16 @@ const ServiceCard = ({ delay, image, title, description }) => (
         </div>
         <div className="service-title">
           <div className="service-title-name">
-            <div className="bg-primary text-center rounded p-3 mx-5 mb-4">
+            <div className="bg-purple text-center rounded p-3 mx-5 mb-4">
               <a href="#" className="h4  mb-0">{title}</a>
             </div>
-            <a className="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
+            <a className="bg-orange text-white btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
           </div>
           <div className="service-content pb-4">
-            <a href="#"><h4 className=" mb-4 py-3" >{title}</h4></a>
-            <div className="px-4 bg-purple">
-              <p className="mb-4 bg-purple">{description}</p>
-              <a className="btn  border-secondary rounded-pill py-3 px-5" href="#">Explore More</a>
+            <a href="#"><h4 className=" mb-4 py-3 bg-white" ><b>{title}</b></h4></a>
+            <div className="px-4">
+              <p className="mb-4 ">{description}</p>
+              <a className="btn bg-orange text-white  border-secondary rounded-pill py-3 px-5" href="#">Explore More</a>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ const Services = ({isHome =false}) => {
         <div className="container ">
         <div className="mx-auto text-center " style={{ maxWidth: '900px' }}>
                     <h5 className="section-title px-3 h1 " style={{ color: 'purple' }}>OUR SERVICES</h5>
-                    <h1 className="mb-4 h3">Explore Our Services</h1>
+                    <h1 className="mb-4 h3" style={{ color:'orange' }}>Explore<span className="text-purple"> Our</span> Services</h1>
                     
                 </div>
          
