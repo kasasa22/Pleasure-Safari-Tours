@@ -12,7 +12,7 @@ const AboutUs = () => {
           <div className="row g-5 align-items-center">
           <div className="mx-auto text-center " style={{ maxWidth: '900px' }}>
                     <h5 className="section-title h1 px-3 " style={{ color: 'purple' }}>ABOUT_US</h5>
-                    <h1 className="mb-4 h4">DISCOVER. <span className='bg-purple'> EXPLORE.</span> EMBRANCE</h1>
+                    <h1 className="mb-4 h4" style={{ color:'orange' }}>DISCOVER. <span className='text-purple'> EXPLORE.</span> EMBRANCE</h1>
                     
                 </div>
             <div className="col-lg-5">
@@ -51,7 +51,7 @@ const AboutUs = () => {
                   <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Bussiness tours</p>
                 </div>
               </div>
-              <a className="bg-purple-500  rounded-pill py-3 px-5 mt-2" href="">Read More</a>
+              <a className="bg-orange  rounded-pill py-3 px-5 mt-2" href="">Read More</a>
             </div>
           </div>
         </div>
