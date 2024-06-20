@@ -10,7 +10,7 @@ const blogData = [
     {
         id: 1,
         image: blogImg1,
-        date: '28 Jan 2020',
+        date: '28 Jan 2021',
         likes: '1.7K',
         comments: '1K',
         author: 'Derox_ug',
@@ -20,21 +20,21 @@ const blogData = [
     {
         id: 2,
         image: blogImg2,
-        date: '28 Jan 2050',
+        date: '28 Dec 2022',
         likes: '1.7K',
         comments: '1K',
         author: 'Royal Hamblin',
-        title: 'Adventures Trip',
+        title: 'Water Activities',
         description: 'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos'
     },
     {
         id: 3,
         image: blogImg3,
-        date: '28 Jan 2050',
+        date: '12 Jun 2050',
         likes: '1.7K',
         comments: '1K',
         author: 'Royal Hamblin',
-        title: 'Adventures Trip',
+        title: 'Moutain Climbing',
         description: 'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos'
     },
 ];
