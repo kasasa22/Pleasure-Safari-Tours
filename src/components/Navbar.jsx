@@ -26,8 +26,8 @@ const Navbar = () => {
                 onClick={toggleMenu}
                 className="text-white focus:outline-none"
               >
-                &#9776; {/* Hamburger icon */}
-              </button>
+                &#9776; 
+                              </button>
             </div>
             <div className={`md:ml-auto ${isOpen ? 'block' : 'hidden'} md:flex space-x-2`}>
               <NavLink
