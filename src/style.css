@@ -2,7 +2,15 @@
     .mobile-menu {
       display: none !important;
     }
+    .website-name {
+        margin-left: 0;
+      }
+      .menu-icon {
+        margin-left: auto;
+        font-size: 1.5rem; /* Increase the icon size */
+        }
   }
+
   
 @media (max-width: 768px) {
     body {
