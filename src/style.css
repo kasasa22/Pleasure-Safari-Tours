@@ -1,4 +1,18 @@
-
+@media (min-width: 768px) {
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+  
+@media (max-width: 768px) {
+    body {
+      font-size: 12px;
+    }
+    .desktop-menu {
+        display: none;
+      }
+ 
+  }
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -37,6 +51,7 @@
     transition: 0.5s;
     z-index: 99;
 }
+
 
 /*** Button Start ***/
 .btn {
