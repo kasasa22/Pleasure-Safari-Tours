@@ -28,13 +28,13 @@ const ServiceCard = ({ delay, image, title, description }) => (
             <div className="bg-purple text-center rounded p-3 mx-5 mb-4">
               <a href="#" className="h4  mb-0">{title}</a>
             </div>
-            <a className="bg-orange text-white btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
+            {/* <a className="bg-orange text-white btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a> */}
           </div>
           <div className="service-content pb-4">
             <a href="#"><h4 className=" mb-4 py-3 bg-white" ><b>{title}</b></h4></a>
             <div className="px-4">
               <p className="mb-4 ">{description}</p>
-              <a className="btn bg-orange text-white  border-secondary rounded-pill py-3 px-5" href="#">Explore More</a>
+              {/* <a className="btn bg-orange text-white  border-secondary rounded-pill py-3 px-5" href="#">Explore More</a> */}
             </div>
           </div>
         </div>
@@ -126,6 +126,11 @@ const Services = ({isHome =false}) => {
               />
             ))}
           </div>
+          <div className="mx-auto text-center " style={{ maxWidth: '900px' }}>
+                    <h5 className="section-title px-3 h1 " style={{ color: 'purple' }}>OUR SERVICES</h5>
+                  
+                    
+                </div>
         </div>
       </div>
     

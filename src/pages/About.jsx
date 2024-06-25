@@ -1,8 +1,7 @@
 import React from 'react';
 import '../styles.css'; 
 import about from '../assets/img/about-2.png'; 
-import about1 from '../assets/img/about-3.jpg'; 
-
+import about1 from '../assets/img/about-3.jpg';
 import Header from '../components/Header';
 import CountriesWeOffer from '../components/CountriesWeOffer'; 
 import MeetOurGuide from '../components/MeetOurGuide';
