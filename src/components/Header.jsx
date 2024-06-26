@@ -1,8 +1,6 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../styles.css'; 
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Container, Typography, Breadcrumbs, Link } from '@mui/material';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const location = useLocation();
@@ -13,16 +11,15 @@ const Header = () => {
       case '/':
         return { title: 'Home', breadcrumb: 'Home' };
       case '/aboutUs':
-        return { title: 'About Us', breadcrumb: 'aboutUs' };
+        return { title: 'About Us', breadcrumb: 'About Us' };
       case '/services':
         return { title: 'Our Services', breadcrumb: 'Services' };
       case '/contact':
         return { title: 'Contact Us', breadcrumb: 'Contact' };
-        case '/packages':
-        return { title: 'Our Packages', breadcrumb: 'packages' };
-        case '/Blogs':
+      case '/packages':
+        return { title: 'Our Packages', breadcrumb: 'Packages' };
+      case '/Blogs':
         return { title: 'Our Blogs', breadcrumb: 'Blogs' };
-      
       default:
         return { title: 'Page', breadcrumb: 'Page' };
     }
@@ -31,20 +28,26 @@ const Header = () => {
   const headerContent = getHeaderContent();
 
   return (
-    <div className="container-fluid bg-breadcrumb">
-      <div className="container text-center py-5" style={{ maxWidth: '900px' }}>
-        <h3 className="text-purple-800 display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">{headerContent.title}</h3>
-        <ol className="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
-          <li className="breadcrumb-item">
-            <NavLink to="/" className="text-warning">Home</NavLink>
-          </li>
-          <li className="breadcrumb-item">
-            <a href="#" className="text-warning">Pages</a>
-          </li>
-          <li className="breadcrumb-item active text-warning">{headerContent.breadcrumb}</li>
-        </ol>
-      </div>
-    </div>
+    <Container maxWidth="xl" sx={{ backgroundColor: '#f8f9fa', py: 5 }}>
+      <Container maxWidth="md" sx={{ textAlign: 'center' }}>
+        <Typography variant="h3" component="h1" color="primary" gutterBottom>
+          {headerContent.title}
+        </Typography>
+        <Breadcrumbs
+          separator="›"
+          aria-label="breadcrumb"
+          sx={{ justifyContent: 'center', display: 'flex' }}
+        >
+          <Link component={NavLink} to="/" color="secondary">
+            Home
+          </Link>
+          <Link href="#" color="secondary">
+            Pages
+          </Link>
+          <Typography color="textPrimary">{headerContent.breadcrumb}</Typography>
+        </Breadcrumbs>
+      </Container>
+    </Container>
   );
 };
 
