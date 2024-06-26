@@ -10,6 +10,10 @@ import Home from './pages/Home.jsx';
 import Contact from './pages/ContactPage.jsx';
 import MainLayout from './layouts/MainLayout.jsx';
 import ServicePage from './pages/ServicePage.jsx';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import theme from './theme';
+
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<MainLayout />} >

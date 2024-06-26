@@ -1,69 +1,84 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Card, CardContent, CardMedia, Typography, Grid, Box, IconButton } from '@mui/material';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import CommentIcon from '@mui/icons-material/Comment';
 import blogImg1 from '../assets/images/zoo.jpeg';
 import blogImg2 from '../assets/images/fun.jpeg';
 import blogImg3 from '../assets/images/blog-3.jpg';
-import '../style.css'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Header from '../components/Header';
 
 const images = {
-    "blogImg1": blogImg1,
-    "blogImg2": blogImg2,
-    "blogImg3": blogImg3
+  "blogImg1": blogImg1,
+  "blogImg2": blogImg2,
+  "blogImg3": blogImg3
 };
 
 const Blogs = () => {
-    const [blogData, setBlogData] = useState([]);
+  const [blogData, setBlogData] = useState([]);
 
-    useEffect(() => {
-        fetch('/data.json')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data.blogs);  // Add this line to debug
-                setBlogData(data.blogs);
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    }, []);
+  useEffect(() => {
+    fetch('/data.json')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.blogs);  // Add this line to debug
+        setBlogData(data.blogs);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
 
-    return (
-        <>
-        <Header/>    
-        <div className="container-fluid blog py-5">
-            <div className="container py-5">
-            
-                <div className="row g-4 justify-content-center">
-                    {blogData.map((blog) => (
-                        <div className="col-lg-4 col-md-6" key={blog.id}>
-                            <div className="blog-item">
-                                <div className="blog-img">
-                                    <div className="blog-img-inner">
-                                        <img className="img-fluid w-100 rounded-top" src={images[blog.image]} alt="Image" />
-                                        <div className="blog-icon">
-                                            <a href="#" className="my-auto"><i className="fas fa-link fa-2x text-white"></i></a>
-                                        </div>
-                                    </div>
-                                    <div className="blog-info d-flex align-items-center border border-start-0 border-end-0">
-                                        <small className="flex-fill text-center border-end py-2"><i className="fa fa-calendar-alt text-primary me-2"></i>{blog.date}</small>
-                                        <a href="#" className="btn-hover flex-fill text-center text-white border-end py-2"><i className="fa fa-thumbs-up text-primary me-2"></i>{blog.likes}</a>
-                                        <a href="#" className="btn-hover flex-fill text-center text-white py-2"><i className="fa fa-comments text-primary me-2"></i>{blog.comments}</a>
-                                    </div>
-                                </div>
-                                <div className="blog-content border border-top-0 rounded-bottom p-4">
-                                    <p className="mb-3">Posted By: {blog.author} </p>
-                                    <a href="#" className="h4">{blog.title}</a>
-                                    <p className="my-3">{blog.description}</p>
-                                    <Link to="/about" className="btn btn-primary rounded-pill py-2 px-4">Read More</Link>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <Box sx={{ py: 5, bgcolor: 'background.paper' }}>
+        <Grid container spacing={4} justifyContent="center">
+          {blogData.map((blog) => (
+            <Grid item key={blog.id} xs={12} sm={6} md={4}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                <CardMedia
+                  component="img"
+                  image={images[blog.image]}
+                  alt="blog image"
+                  sx={{ height: 200 }}
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography variant="body2" color="textSecondary" sx={{ mb: 1.5 }}>
+                    <CalendarTodayIcon sx={{ verticalAlign: 'middle', mr: 0.5 }} />
+                    {blog.date}
+                  </Typography>
+                  <Typography variant="h5" component="div" sx={{ mb: 1.5 }}>
+                    {blog.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ mb: 1.5 }}>
+                    Posted By: {blog.author}
+                  </Typography>
+                  <Typography variant="body2" paragraph>
+                    {blog.description}
+                  </Typography>
+                  <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <IconButton size="small" color="primary">
+                      <ThumbUpIcon />
+                      <Typography variant="body2" sx={{ ml: 0.5 }}>{blog.likes}</Typography>
+                    </IconButton>
+                    <IconButton size="small" color="primary">
+                      <CommentIcon />
+                      <Typography variant="body2" sx={{ ml: 0.5 }}>{blog.comments}</Typography>
+                    </IconButton>
+                  </Box>
+                </CardContent>
+                <Box sx={{ px: 2, pb: 2 }}>
+                  <Link to="/about" style={{ textDecoration: 'none' }}>
+                    <Typography variant="button" color="primary">Read More</Typography>
+                  </Link>
+                </Box>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </>
+  );
 };
 
 export default Blogs;
