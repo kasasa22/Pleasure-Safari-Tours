@@ -1,8 +1,7 @@
 // src/components/MeetOurGuide.js
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../styles.css'; 
+import { Container, Grid, Box, Typography, Card, CardMedia, CardContent, CardActions, IconButton, Avatar } from '@mui/material';
+import { Facebook, Twitter, Instagram, LinkedIn } from '@mui/icons-material';
 import guide1 from '../assets/images/guide-1.jpg';
 import guide2 from '../assets/images/guide-2.jpg';
 import guide3 from '../assets/images/guide-3.jpg';
@@ -12,44 +11,59 @@ const guides = [
   { img: guide1, name: 'Yvonne', designation: 'CEO' },
   { img: guide2, name: 'Chloe', designation: 'Senior Guide' },
   { img: guide3, name: 'Derrick', designation: 'Administrator' },
-  { img: guide4, name: 'Trevor', designation: 'support' },
+  { img: guide4, name: 'Trevor', designation: 'Support' },
 ];
 
 const MeetOurGuide = () => {
   return (
-    <div className="container-fluid guide py-5">
-      <div className="container py-5">
-        <div className="mx-auto text-center mb-5" style={{ maxWidth: '900px' }}>
-          <h5 className="section-title px-3 h1 text-purple">Travel Guide</h5>
-          <h1 className="mb-0 h3 text-orange">Meet Our Guide</h1>
-        </div>
-        <div className="row g-4">
+    <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
+      <Container sx={{ py: 5 }}>
+        <Box sx={{ textAlign: 'center', mb: 5, maxWidth: 900, mx: 'auto' }}>
+          <Typography variant="h5" component="div" color="primary" gutterBottom>
+            Travel Guide
+          </Typography>
+          <Typography variant="h3" component="div" color="secondary">
+            Meet Our Guide
+          </Typography>
+        </Box>
+        <Grid container spacing={4}>
           {guides.map((guide, index) => (
-            <div key={index} className="col-md-6 col-lg-3">
-              <div className="guide-item">
-                <div className="guide-img">
-                  <div className="guide-img-efects">
-                    <img src={guide.img} className="img-fluid w-100 rounded-top" alt="Guide" />
-                  </div>
-                  <div className="guide-icon rounded-pill p-2">
-                    <a className="btn btn-square btn-primary rounded-circle mx-1" href="#"><i className="fab fa-facebook-f"></i></a>
-                    <a className="btn btn-square btn-primary rounded-circle mx-1" href="#"><i className="fab fa-twitter"></i></a>
-                    <a className="btn btn-square btn-primary rounded-circle mx-1" href="#"><i className="fab fa-instagram"></i></a>
-                    <a className="btn btn-square btn-primary rounded-circle mx-1" href="#"><i className="fab fa-linkedin-in"></i></a>
-                  </div>
-                </div>
-                <div className="guide-title text-center rounded-bottom p-4">
-                  <div className="guide-title-inner">
-                    <h4 className="mt-3">{guide.name}</h4>
-                    <p className="mb-0">{guide.designation}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Grid item key={index} xs={12} sm={6} md={3}>
+              <Card>
+                <CardMedia
+                  component="img"
+                  height="200"
+                  image={guide.img}
+                  alt={guide.name}
+                />
+                <CardContent sx={{ textAlign: 'center' }}>
+                  <Typography variant="h4" component="div" gutterBottom>
+                    {guide.name}
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary">
+                    {guide.designation}
+                  </Typography>
+                </CardContent>
+                <CardActions sx={{ justifyContent: 'center' }}>
+                  <IconButton color="primary" href="#">
+                    <Facebook />
+                  </IconButton>
+                  <IconButton color="primary" href="#">
+                    <Twitter />
+                  </IconButton>
+                  <IconButton color="primary" href="#">
+                    <Instagram />
+                  </IconButton>
+                  <IconButton color="primary" href="#">
+                    <LinkedIn />
+                  </IconButton>
+                </CardActions>
+              </Card>
+            </Grid>
           ))}
-        </div>
-      </div>
-    </div>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
