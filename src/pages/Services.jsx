@@ -1,9 +1,5 @@
-// src/components/Services.js
 import React from 'react';
-import '../style.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+import { Card, CardContent, CardMedia, Typography, Grid, Box, Button } from '@mui/material';
 import serviceImg1 from '../assets/img/service-1.jpg';
 import serviceImg2 from '../assets/img/service-2.jpeg';
 import serviceImg3 from '../assets/img/service-3.jpg';
@@ -15,35 +11,33 @@ import serviceImg8 from '../assets/img/service-8.jpeg';
 import serviceImg9 from '../assets/img/service-9.jpeg';
 import Header from '../components/Header';
 
-
 const ServiceCard = ({ delay, image, title, description }) => (
-  <div className={`col-lg-6 col-xl-4 wow fadeInUp`} data-wow-delay={`${delay}s`}>
-    <div className="service-item">
-      <div className="service-inner">
-        <div className="service-img">
-          <img src={image} className="img-fluid fixed-size rounded" alt="Image" />
-        </div>
-        <div className="service-title">
-          <div className="service-title-name">
-            <div className="bg-purple text-center rounded p-3 mx-5 mb-4">
-              <a href="#" className="h4  mb-0">{title}</a>
-            </div>
-            <a className="bg-orange text-white btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
-          </div>
-          <div className="service-content pb-4">
-            <a href="#"><h4 className=" mb-4 py-3 bg-white" ><b>{title}</b></h4></a>
-            <div className="px-4">
-              <p className="mb-4 ">{description}</p>
-              <a className="btn bg-orange text-white  border-secondary rounded-pill py-3 px-5" href="#">Explore More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Grid item xs={12} sm={6} md={4}>
+    <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <CardMedia
+        component="img"
+        image={image}
+        alt="Service Image"
+        sx={{ height: 200 }}
+      />
+      <CardContent sx={{ flexGrow: 1 }}>
+        <Typography variant="h5" component="div" gutterBottom>
+          {title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {description}
+        </Typography>
+      </CardContent>
+      <Box sx={{ px: 2, pb: 2 }}>
+        <Button variant="contained" color="primary">
+          Explore More
+        </Button>
+      </Box>
+    </Card>
+  </Grid>
 );
 
-const Services = ({isHome =false}) => {
+const Services = ({ isHome = false }) => {
   const services = [
     {
       delay: 0.1,
@@ -87,8 +81,6 @@ const Services = ({isHome =false}) => {
       title: 'Cruise Bookings',
       description: 'Sail the seas with our cruise booking services. Choose from a variety of luxurious cruises that offer breathtaking views, entertainment, and relaxation on the open waters.',
     },
-  
-    
     {
       delay: 0.3,
       image: serviceImg2,
@@ -102,35 +94,33 @@ const Services = ({isHome =false}) => {
       description: 'Optimize your business travel with our comprehensive business tour services. We handle all the logistics, ensuring your focus remains on your professional engagements.',
     },
   ];
-  const serviceList = isHome ? services.slice(0,3):services;
+  const serviceList = isHome ? services.slice(0, 3) : services;
 
   return (
-    
-    <section>
+    <>
       <Header />
-        <div className="container-fluid service overflow-hidden " style={{ marginTop: '50px' }}>
-          <div className="container ">
-          <div className="mx-auto text-center " style={{ maxWidth: '900px' }}>
-                    <h5 className="section-title px-3 h1 " style={{ color: 'purple' }}>Pleasure and Safari Tours</h5>
-                    <h1 className="mb-4 h3" style={{ color:'orange' }}>Delivering<span className="text-purple"> Quality</span> Services</h1>
-                    
-                </div>
-      
-            <div className="row g-4">
-              {serviceList.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  delay={service.delay}
-                  image={service.image}
-                  title={service.title}
-                  description={service.description}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-    </section>
-    
+      <Box sx={{ py: 5, bgcolor: 'background.paper' }}>
+        <Box sx={{ maxWidth: '900px', mx: 'auto', textAlign: 'center', mb: 4 }}>
+          <Typography variant="h4" component="div" gutterBottom>
+            Pleasure and Safari Tours
+          </Typography>
+          <Typography variant="h5" component="div" gutterBottom>
+            Delivering <span style={{ color: 'purple' }}>Quality</span> Services
+          </Typography>
+        </Box>
+        <Grid container spacing={4} justifyContent="center">
+          {serviceList.map((service, index) => (
+            <ServiceCard
+              key={index}
+              delay={service.delay}
+              image={service.image}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
+        </Grid>
+      </Box>
+    </>
   );
 };
 
