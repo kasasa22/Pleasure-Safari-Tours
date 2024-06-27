@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Container, Typography, Box, Card, CardMedia, CardContent, Grid } from '@mui/material';
+import { Container, Typography, Box } from '@mui/material';
 import serviceImg1 from '../assets/img/service-1.jpg';
 import serviceImg2 from '../assets/img/service-2.jpeg';
 import serviceImg3 from '../assets/img/service-3.jpg';
@@ -23,7 +23,7 @@ const serviceData = [
     { id: 9, image: serviceImg9, title: 'Business Tours', description: 'Full description of Business Tours...' },
 ];
 
-const ServicePage = () => {
+const ServiceDetails = () => {
     const { id } = useParams();
     const service = serviceData.find((service) => service.id === parseInt(id));
 
@@ -34,31 +34,18 @@ const ServicePage = () => {
     return (
         <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
             <Container sx={{ py: 5 }}>
-                <Card sx={{ display: 'flex' }}>
-                    <Grid container>
-                        <Grid item xs={12} md={6}>
-                            <CardMedia
-                                component="img"
-                                image={service.image}
-                                alt={service.title}
-                                sx={{ height: '100%', objectFit: 'cover' }}
-                            />
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <CardContent>
-                                <Typography variant="h4" component="div" gutterBottom>
-                                    {service.title}
-                                </Typography>
-                                <Typography variant="body1" color="text.secondary">
-                                    {service.description}
-                                </Typography>
-                            </CardContent>
-                        </Grid>
-                    </Grid>
-                </Card>
+                <Box sx={{ textAlign: 'center', mb: 5, maxWidth: 900, mx: 'auto' }}>
+                    <Typography variant="h5" component="div" color="primary" gutterBottom>
+                        {service.title}
+                    </Typography>
+                    <Box component="img" src={service.image} alt={service.title} sx={{ width: '100%', maxHeight: 400, objectFit: 'cover', mb: 4 }} />
+                    <Typography variant="body1" color="text.secondary">
+                        {service.description}
+                    </Typography>
+                </Box>
             </Container>
         </Box>
     );
 };
 
-export default ServicePage;
+export default ServiceDetails;
