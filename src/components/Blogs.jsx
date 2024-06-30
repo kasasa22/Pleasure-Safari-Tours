@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Grid, Card, CardMedia, CardContent, CardActions, Typography, Button, Box } from '@mui/material';
-import blogImg1 from '../assets/images/zoo.jpeg';
+import blogImg1 from '../assets/images/zoo.jpg';
 import blogImg2 from '../assets/images/fun.jpeg';
 import blogImg3 from '../assets/images/blog-3.jpg';
 

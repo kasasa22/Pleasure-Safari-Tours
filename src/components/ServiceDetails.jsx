@@ -38,7 +38,19 @@ const ServiceDetails = () => {
                     <Typography variant="h5" component="div" color="primary" gutterBottom>
                         {service.title}
                     </Typography>
-                    <Box component="img" src={service.image} alt={service.title} sx={{ width: '100%', maxHeight: 400, objectFit: 'cover', mb: 4 }} />
+                    <Box 
+                        component="img" 
+                        src={service.image} 
+                        alt={service.title} 
+                        sx={{ 
+                            width: '100%', 
+                            maxHeight: 400, 
+                            objectFit: 'cover', 
+                            mb: 4, 
+                            borderRadius: 2, 
+                            boxShadow: 3 
+                        }} 
+                    />
                     <Typography variant="body1" color="text.secondary">
                         {service.description}
                     </Typography>
