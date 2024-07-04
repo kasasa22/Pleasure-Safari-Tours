@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import TourIcon from '../assets/img/logo.png'; // Import your own image
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -21,7 +22,8 @@ const Navbar = () => {
   return (
     <AppBar position="static" style={{ backgroundColor: '#5A20A4' }}>
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+          <img src={TourIcon} alt="logo" style={{ width: 30, height: 30, marginRight: 8 }} />
           Pleasure & Safari Tours
         </Typography>
         {isMobile ? (

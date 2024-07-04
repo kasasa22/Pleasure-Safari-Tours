@@ -1,6 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Container, Typography, Box, Card, CardMedia, CardContent, Grid } from '@mui/material';
+import { Container, Grid, Box, Typography, Button } from '@mui/material';
 import serviceImg1 from '../assets/img/service-1.jpg';
 import serviceImg2 from '../assets/img/service-2.jpeg';
 import serviceImg3 from '../assets/img/service-3.jpg';
@@ -11,54 +10,59 @@ import serviceImg7 from '../assets/img/service-7.jpeg';
 import serviceImg8 from '../assets/img/service-8.jpeg';
 import serviceImg9 from '../assets/img/service-9.jpeg';
 
-const serviceData = [
-    { id: 1, image: serviceImg1, title: 'Air Reservations and Ticketing', description: 'Full description of Air Reservations and Ticketing...' },
-    { id: 2, image: serviceImg2, title: 'Excursion & Local Sightseeing', description: 'Full description of Excursion & Local Sightseeing...' },
-    { id: 3, image: serviceImg3, title: 'Visa and Passport Processing', description: 'Full description of Visa and Passport Processing...' },
-    { id: 4, image: serviceImg4, title: 'Hotel Reservations', description: 'Full description of Hotel Reservations...' },
-    { id: 5, image: serviceImg5, title: 'Airport Transfers', description: 'Full description of Airport Transfers...' },
-    { id: 6, image: serviceImg6, title: 'Education Tours', description: 'Full description of Education Tours...' },
-    { id: 7, image: serviceImg7, title: 'Cruise Bookings', description: 'Full description of Cruise Bookings...' },
-    { id: 8, image: serviceImg8, title: 'Tour Packages', description: 'Full description of Tour Packages...' },
-    { id: 9, image: serviceImg9, title: 'Business Tours', description: 'Full description of Business Tours...' },
+const services = [
+  { id: 1, name: 'Rafting', image: serviceImg1 },
+  { id: 2, name: 'Hiking', image: serviceImg2 },
+  { id: 3, name: 'Camping', image: serviceImg3 },
+  { id: 4, name: 'Air Reservations and Ticketing', image: serviceImg4 },
+  { id: 5, name: 'Excursion & Local Sightseeing', image: serviceImg5 },
+  { id: 6, name: 'Visa and Passport Processing', image: serviceImg6 },
+  { id: 7, name: 'Hotel Reservations', image: serviceImg7 },
+  { id: 8, name: 'Airport Transfers', image: serviceImg8 },
+  { id: 9, name: 'Education Tours', image: serviceImg9 },
 ];
 
-const ServicePage = () => {
-    const { id } = useParams();
-    const service = serviceData.find((service) => service.id === parseInt(id));
-
-    if (!service) {
-        return <Typography variant="h6" component="div">Service not found</Typography>;
-    }
-
-    return (
-        <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
-            <Container sx={{ py: 5 }}>
-                <Card sx={{ display: 'flex' }}>
-                    <Grid container>
-                        <Grid item xs={12} md={6}>
-                            <CardMedia
-                                component="img"
-                                image={service.image}
-                                alt={service.title}
-                                sx={{ height: '100%', objectFit: 'cover' }}
-                            />
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <CardContent>
-                                <Typography variant="h4" component="div" gutterBottom>
-                                    {service.title}
-                                </Typography>
-                                <Typography variant="body1" color="text.secondary">
-                                    {service.description}
-                                </Typography>
-                            </CardContent>
-                        </Grid>
-                    </Grid>
-                </Card>
-            </Container>
+const ServicesSection = () => {
+  return (
+    <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
+      <Container>
+        <Typography variant="h3" component="h1" align="center" gutterBottom>
+          Services
+        </Typography>
+        <Typography variant="body1" align="center" gutterBottom>
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+        </Typography>
+        <Box sx={{ mt: 4 }}>
+          <Grid container spacing={4}>
+            {services.map((service) => (
+              <Grid item xs={12} sm={6} md={4} key={service.id}>
+                <Box sx={{ textAlign: 'center' }}>
+                  <img
+                    src={service.image}
+                    alt={service.name}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      border: '2px solid purple',
+                    }}
+                  />
+                  <Box sx={{ mt: 2 }}>
+                    <Button
+                      variant="contained"
+                      color={service.name === 'Hiking' ? 'secondary' : 'primary'}
+                      sx={{ textTransform: 'none' }}
+                    >
+                      {service.name}
+                    </Button>
+                  </Box>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
         </Box>
-    );
+      </Container>
+    </Box>
+  );
 };
 
-export default ServicePage;
+export default ServicesSection;
