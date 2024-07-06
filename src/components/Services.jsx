@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Grid, Box, Typography, Button } from '@mui/material';
 import serviceImg1 from '../assets/img/service-1.jpg';
-import serviceImg2 from '../assets/img/service-2.jpeg';
-import serviceImg3 from '../assets/img/service-3.jpg';
+import serviceImg2 from '../assets/img/gorilla.jpg';
+import serviceImg3 from '../assets/images/passport.jpeg';
 
 const services = [
   {
@@ -12,12 +12,12 @@ const services = [
   },
   {
     id: 2,
-    name: 'Hiking',
+    name: 'zoo visits',
     image: serviceImg2,
   },
   {
     id: 3,
-    name: 'Camping',
+    name: 'Passport Processing',
     image: serviceImg3,
   },
 ];
@@ -27,10 +27,10 @@ const ServicesSection = () => {
     <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
       <Container>
         <Typography variant="h3" component="h1" align="center" gutterBottom>
-          Services
+        <h5 className="section-title h1 px-3 " style={{ color: 'purple' }}>OUR SERVICES</h5>
         </Typography>
         <Typography variant="body1" align="center" gutterBottom>
-          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+        <h1 className="mb-4 h4" style={{ color:'orange' }}>EXPLORER <span className='text-purple'> OUR</span> SERVICES</h1>
         </Typography>
         <Box sx={{ mt: 4 }}>
           <Grid container spacing={4}>
