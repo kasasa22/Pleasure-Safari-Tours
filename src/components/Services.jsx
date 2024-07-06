@@ -27,7 +27,7 @@ const ServicesSection = () => {
     <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
       <Container>
         <Typography variant="h3" component="h1" align="center" gutterBottom>
-        <h5 className="section-title h1 px-3 " style={{ color: 'purple' }}>OUR SERVICES</h5>
+        <h5 className="section-title h1 px-3 " style={{ color: 'purple' }}>--OUR SERVICES--</h5>
         </Typography>
         <Typography variant="body1" align="center" gutterBottom>
         <h1 className="mb-4 h4" style={{ color:'orange' }}>EXPLORER <span className='text-purple'> OUR</span> SERVICES</h1>
