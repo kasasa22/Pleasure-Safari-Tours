@@ -1,84 +1,100 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Card, CardContent, CardMedia, Typography, Grid, Box, IconButton } from '@mui/material';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import CommentIcon from '@mui/icons-material/Comment';
-import blogImg1 from '../assets/images/zoo.jpeg';
+import React from 'react';
+import { Container, Grid, Card, CardMedia, CardContent, CardActions, Typography, Button, Box } from '@mui/material';
+import blogImg1 from '../assets/images/zoo.jpg';
 import blogImg2 from '../assets/images/fun.jpeg';
 import blogImg3 from '../assets/images/blog-3.jpg';
-import Header from '../components/Header';
 
-const images = {
-  "blogImg1": blogImg1,
-  "blogImg2": blogImg2,
-  "blogImg3": blogImg3
-};
+const blogData = [
+    {
+        id: 1,
+        image: blogImg1,
+        date: '28 Jan 2021',
+        likes: '1.7K',
+        comments: '1K',
+        author: 'Derox_ug',
+        title: 'Adventures Trip',
+        description: 'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos'
+    },
+    {
+        id: 2,
+        image: blogImg2,
+        date: '28 Dec 2022',
+        likes: '1.7K',
+        comments: '1K',
+        author: 'Royal Hamblin',
+        title: 'Water Activities',
+        description: 'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos'
+    },
+    {
+        id: 3,
+        image: blogImg3,
+        date: '12 Jun 2050',
+        likes: '1.7K',
+        comments: '1K',
+        author: 'Royal Hamblin',
+        title: 'Moutain Climbing',
+        description: 'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos'
+    },
+];
 
 const Blogs = () => {
-  const [blogData, setBlogData] = useState([]);
-
-  useEffect(() => {
-    fetch('/data.json')
-      .then(response => response.json())
-      .then(data => {
-        console.log(data.blogs);  // Add this line to debug
-        setBlogData(data.blogs);
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
-
-  return (
-    <>
-      <Header />
-      <Box sx={{ py: 5, bgcolor: 'background.paper' }}>
-        <Grid container spacing={4} justifyContent="center">
-          {blogData.map((blog) => (
-            <Grid item key={blog.id} xs={12} sm={6} md={4}>
-              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                <CardMedia
-                  component="img"
-                  image={images[blog.image]}
-                  alt="blog image"
-                  sx={{ height: 200 }}
-                />
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography variant="body2" color="textSecondary" sx={{ mb: 1.5 }}>
-                    <CalendarTodayIcon sx={{ verticalAlign: 'middle', mr: 0.5 }} />
-                    {blog.date}
-                  </Typography>
-                  <Typography variant="h5" component="div" sx={{ mb: 1.5 }}>
-                    {blog.title}
-                  </Typography>
-                  <Typography variant="body2" sx={{ mb: 1.5 }}>
-                    Posted By: {blog.author}
-                  </Typography>
-                  <Typography variant="body2" paragraph>
-                    {blog.description}
-                  </Typography>
-                  <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <IconButton size="small" color="primary">
-                      <ThumbUpIcon />
-                      <Typography variant="body2" sx={{ ml: 0.5 }}>{blog.likes}</Typography>
-                    </IconButton>
-                    <IconButton size="small" color="primary">
-                      <CommentIcon />
-                      <Typography variant="body2" sx={{ ml: 0.5 }}>{blog.comments}</Typography>
-                    </IconButton>
-                  </Box>
-                </CardContent>
-                <Box sx={{ px: 2, pb: 2 }}>
-                  <Link to="/about" style={{ textDecoration: 'none' }}>
-                    <Typography variant="button" color="primary">Read More</Typography>
-                  </Link>
+    return (
+        <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
+            <Container sx={{ py: 5 }}>
+                <Box sx={{ textAlign: 'center', mb: 5, maxWidth: 900, mx: 'auto' }}>
+                    <Typography variant="h5" component="div" color="primary" gutterBottom>
+                        Our Blogs
+                    </Typography>
+                    <Typography variant="h3" component="div" color="secondary">
+                        Popular <span style={{ color: 'purple' }}>Travel</span> Blogs
+                    </Typography>
                 </Box>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-    </>
-  );
+                <Grid container spacing={4} justifyContent="center">
+                    {blogData.map((blog) => (
+                        <Grid item xs={12} sm={6} md={4} key={blog.id}>
+                            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                <CardMedia
+                                    component="img"
+                                    image={blog.image}
+                                    alt={blog.title}
+                                    sx={{ height: 200, objectFit: 'cover' }}
+                                />
+                                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 1, borderTop: '1px solid rgba(0, 0, 0, 0.12)', borderBottom: '1px solid rgba(0, 0, 0, 0.12)' }}>
+                                    <Typography variant="body2" color="text.secondary">
+                                        <i className="fa fa-calendar-alt text-purple me-2"></i>{blog.date}
+                                    </Typography>
+                                    <Box>
+                                        <Button size="small" color="primary">
+                                            <i className="fa fa-thumbs-up text-purple me-2"></i>{blog.likes}
+                                        </Button>
+                                        <Button size="small" color="primary">
+                                            <i className="fa fa-comments text-purple me-2"></i>{blog.comments}
+                                        </Button>
+                                    </Box>
+                                </Box>
+                                <CardContent sx={{ flexGrow: 1 }}>
+                                    <Typography variant="body2" color="text.secondary" gutterBottom>
+                                        Posted By: {blog.author}
+                                    </Typography>
+                                    <Typography variant="h5" component="div" color="primary" gutterBottom>
+                                        {blog.title}
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        {blog.description}
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="large" variant="contained" color="secondary" fullWidth>
+                                        Read More
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Container>
+        </Box>
+    );
 };
 
 export default Blogs;

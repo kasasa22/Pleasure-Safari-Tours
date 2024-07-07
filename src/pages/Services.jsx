@@ -1,3 +1,4 @@
+// Services.js
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Grid, Box, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -42,7 +43,7 @@ const ServiceCard = ({ id, image, title, description }) => (
         </Typography>
       </CardContent>
       <Box sx={{ px: 2, pb: 2 }}>
-        <Button component={Link} to={`/services/${id}`} variant="contained" color="primary">
+        <Button component={Link} to={`/services/${id}`} variant="contained" color="secondary">
           Explore More
         </Button>
       </Box>

@@ -39,7 +39,7 @@ const blogData = [
 
 const Blogs = () => {
     return (
-        <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
+        <Box sx={{ backgroundColor: 'background.default' }}>
             <Container sx={{ py: 5 }}>
                 <Box sx={{ textAlign: 'center', mb: 5, maxWidth: 900, mx: 'auto' }}>
                     <Typography variant="h5" component="div" color="primary" gutterBottom>
@@ -64,9 +64,6 @@ const Blogs = () => {
                                         <i className="fa fa-calendar-alt text-purple me-2"></i>{blog.date}
                                     </Typography>
                                     <Box>
-                                        <Button size="small" color="primary">
-                                            <i className="fa fa-thumbs-up text-purple me-2"></i>{blog.likes}
-                                        </Button>
                                         <Button size="small" color="primary">
                                             <i className="fa fa-comments text-purple me-2"></i>{blog.comments}
                                         </Button>

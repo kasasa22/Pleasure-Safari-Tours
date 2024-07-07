@@ -13,6 +13,7 @@ import ServicePage from './pages/ServicePage.jsx';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';
+import Gallery from './components/Gallery.jsx';
 
 
 const routes = createRoutesFromElements(
