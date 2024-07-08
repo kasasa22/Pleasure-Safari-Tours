@@ -1,6 +1,7 @@
 // Services.js
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography, Grid, Box, Button } from '@mui/material';
+import Header from '../components/Header';
+import { Container, Grid, Card, CardContent, CardMedia, Typography, Button, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import serviceImg1 from '../assets/img/service-1.jpg';
 import serviceImg2 from '../assets/img/service-2.jpeg';
@@ -11,7 +12,6 @@ import serviceImg6 from '../assets/img/service-6.jpeg';
 import serviceImg7 from '../assets/img/service-7.jpeg';
 import serviceImg8 from '../assets/img/service-8.jpeg';
 import serviceImg9 from '../assets/img/service-9.jpeg';
-import Header from '../components/Header';
 
 const serviceData = [
     { id: 1, image: serviceImg1, title: 'Air Reservations and Ticketing', description: 'We provide seamless air reservations and ticketing services to ensure a hassle-free journey. From selecting the best flights to booking your tickets, we manage everything for you.' },
@@ -31,8 +31,8 @@ const ServiceCard = ({ id, image, title, description }) => (
       <CardMedia
         component="img"
         image={image}
-        alt="Service Image"
-        sx={{ height: 200 }}
+        alt={title}
+        sx={{ height: 200, objectFit: 'cover' }}
       />
       <CardContent sx={{ flexGrow: 1 }}>
         <Typography variant="h5" component="div" gutterBottom>
@@ -43,7 +43,7 @@ const ServiceCard = ({ id, image, title, description }) => (
         </Typography>
       </CardContent>
       <Box sx={{ px: 2, pb: 2 }}>
-        <Button component={Link} to={`/services/${id}`} variant="contained" color="secondary">
+        <Button component={Link} to={`/services/${id}`} variant="contained" color="secondary" fullWidth>
           Explore More
         </Button>
       </Box>
@@ -55,15 +55,15 @@ const Services = ({ isHome = false }) => {
   const serviceList = isHome ? serviceData.slice(0, 3) : serviceData;
 
   return (
-    <>
-      <Header />
-      <Box sx={{ py: 5, bgcolor: 'background.paper' }}>
-        <Box sx={{ maxWidth: '900px', mx: 'auto', textAlign: 'center', mb: 4 }}>
-          <Typography variant="h4" component="div" gutterBottom>
-            Pleasure and Safari Tours
-          </Typography>
-          <Typography variant="h5" component="div" gutterBottom>
-            Delivering <span style={{ color: 'purple' }}>Quality</span> Services
+    <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
+      <Header/>
+      <Container sx={{ py: 5 }}>
+        <Box sx={{ textAlign: 'center', mb: 5, maxWidth: 900, mx: 'auto' }}>
+          {/* <Typography variant="h5" component="div" color="primary" gutterBottom>
+            Our Services
+          </Typography> */}
+          <Typography variant="h3" component="div" color="secondary">
+            Explore Our <span style={{ color: 'purple' }}>Quality</span> Services
           </Typography>
         </Box>
         <Grid container spacing={4} justifyContent="center">
@@ -77,8 +77,8 @@ const Services = ({ isHome = false }) => {
             />
           ))}
         </Grid>
-      </Box>
-    </>
+      </Container>
+    </Box>
   );
 };
 

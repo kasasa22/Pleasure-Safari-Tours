@@ -3,6 +3,7 @@ import { Container, Grid, Card, CardMedia, CardContent, CardActions, Typography,
 import blogImg1 from '../assets/images/zoo.jpg';
 import blogImg2 from '../assets/images/fun.jpeg';
 import blogImg3 from '../assets/images/blog-3.jpg';
+import Header from '../components/Header';
 
 const blogData = [
     {
@@ -40,11 +41,12 @@ const blogData = [
 const Blogs = () => {
     return (
         <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
+            <Header/>
             <Container sx={{ py: 5 }}>
                 <Box sx={{ textAlign: 'center', mb: 5, maxWidth: 900, mx: 'auto' }}>
-                    <Typography variant="h5" component="div" color="primary" gutterBottom>
+                    {/* <Typography variant="h5" component="div" color="primary" gutterBottom>
                         Our Blogs
-                    </Typography>
+                    </Typography> */}
                     <Typography variant="h3" component="div" color="secondary">
                         Popular <span style={{ color: 'purple' }}>Travel</span> Blogs
                     </Typography>
