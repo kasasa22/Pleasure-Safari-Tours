@@ -57,7 +57,7 @@ const Services = ({ isHome = false }) => {
     <Box sx={{ py: 5, backgroundColor: 'background.default' }}>
       <Container sx={{ py: 5 }}>
         <Box sx={{ textAlign: 'center', mb: 5, maxWidth: 900, mx: 'auto' }}>
-          <Typography variant="h5" component="div" color="primary" gutterBottom>
+          <Typography variant="h5 section-title h1 px-3" component="div" color="purple" gutterBottom>
             Our Services
           </Typography>
           <Typography variant="h3" component="div" color="secondary">

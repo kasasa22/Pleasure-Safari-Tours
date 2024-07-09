@@ -26,7 +26,7 @@ const Hero = () => {
                   <h1 className="display-2 text-capitalize text-white mb-4">Let's Guide you around the world</h1>
                   <p className="mb-5 fs-5">let's go to various areas of interest around the world and explore as we learn</p>
                   <div className="d-flex align-items-center justify-content-center">
-                    <a className="btn-hover-bg bg-purple-500  rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                    <a className="btn-hover-bg bg-purple-500  rounded-pill text-white py-3 px-5" href="#">Generate Quote</a>
                   </div>
                 </div>
               </div>
@@ -39,7 +39,7 @@ const Hero = () => {
                   <h1 className="display-2 text-capitalize text-white mb-4">Quick and Faster ticket and visa Processing</h1>
                   <p className="mb-5 fs-5">DISCOVER. EXPLORE. EMBRACE </p>
                   <div className="d-flex align-items-center justify-content-center">
-                    <a className="btn-hover-bg bg-purple-500  rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                    <a className="btn-hover-bg bg-purple-500  rounded-pill text-white py-3 px-5" href="#">Generate Quote</a>
                   </div>
                 </div>
               </div>
@@ -53,7 +53,7 @@ const Hero = () => {
                   <p className="mb-5 fs-5">enjoy various activities with us in different places around the world. 
                   </p>
                   <div className="d-flex align-items-center justify-content-center">
-                    <a className="btn-hover-bg bg-purple-500 rounded-pill text-white py-3 px-5" href="#">Discover Now</a>
+                    <a className="btn-hover-bg bg-purple-500 rounded-pill text-white py-3 px-5" href="#">Generate Quote</a>
                   </div>
                 </div>
               </div>
